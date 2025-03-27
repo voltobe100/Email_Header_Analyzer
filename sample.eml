@@ -1,0 +1,14 @@
+From: attacker@example.com
+To: victim@example.com
+Subject: Urgent Account Verification Required
+Date: Sat, 23 Mar 2025 12:00:00 +0000
+Message-ID: <12345@example.com>
+Return-Path: <attacker@example.com>
+Received: from attacker.example.com ([192.168.1.100])
+    by mailserver.example.com with SMTP;
+    Sat, 23 Mar 2025 12:00:00 +0000
+Authentication-Results: spf=fail dkim=fail dmarc=fail
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+    d=example.com; s=default; h=from:subject:date;
+    bh=xyz123abc=;
+    b=InvalidSignatureHere
